@@ -278,19 +278,7 @@ function App() {
         cesiumViewer.imageryLayers.removeAll();
         cesiumViewer.scene.primitives.removeAll();
 
-        // const tilesetPaths = [
-            // '/3DTiles/Data/Tile_1/Tile_1.json',
-            // '/3DTiles/Data/Tile_10/Tile_10.json',
-            // '/3DTiles/Data/Tile_23/Tile_23.json',
-            // '/3DTiles/Data/Tile_24/Tile_24.json',
-            // '/3DTiles/Data/Tile_40/Tile_40.json',
-            // '/3DTiles/Data/Tile_42/Tile_42.json',
-            // '/3DTiles/Data/Tile_43/Tile_43.json',
-            // '/3DTiles/Data/Tile_44/Tile_44.json',
-            // '/3DTiles/Data/Tile_45/Tile_45.json',
-            // '/3DTiles/Data/Tile_46/Tile_46.json',
 
-        // ];
 
         const tilesetPaths = [
             "/3DTiles/Data/Tile_1/Tile_1.json",
