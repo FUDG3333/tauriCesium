@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-m = cv2.imread("./outputs/img_mask/view_1 (1)_mask.png", cv2.IMREAD_UNCHANGED)
+m = cv2.imread("./outputs/mask2/view_23_mask.png", cv2.IMREAD_UNCHANGED)
 print(np.unique(m))
 
 

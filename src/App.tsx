@@ -264,6 +264,43 @@ function App() {
             });
         }
     }, []);
+    useEffect(() => {
+    const onKeyDown = (e: KeyboardEvent) => {
+        // 避免在输入框里误触
+        if (
+            (e.target as HTMLElement)?.tagName === "INPUT" ||
+            (e.target as HTMLElement)?.tagName === "TEXTAREA"
+        ) {
+            return;
+        }
+
+        switch (e.key.toLowerCase()) {
+            case "r":
+                handleRecordCamera();
+                console.log("快捷键 R：记录视角");
+                break;
+
+            case "e":
+                handleExportCameras();
+                console.log("快捷键 E：导出视角");
+                break;
+
+            case "i":
+                handleImportAndScreenshot();
+                console.log("快捷键 I：导入视角并截图");
+                break;
+
+            default:
+                break;
+        }
+    };
+
+    window.addEventListener("keydown", onKeyDown);
+
+    return () => {
+        window.removeEventListener("keydown", onKeyDown);
+    };
+}, [cameraList]);
 
     // ----------------------------
     // 加载多 3DTiles（你的第二个按钮）
@@ -701,16 +738,16 @@ function App() {
                         timeline={false}
 
                         //下面这个截图的时候再开启，选视角的时候不开启
-                        contextOptions={{
-                            webgl: {
-                                alpha: true,
-                                depth: true,
-                                stencil: true,
-                                antialias: true,
-                                premultipliedAlpha: true,
-                                preserveDrawingBuffer: true,   // ★★★ 必须加
-                            }
-                        }}
+                        // contextOptions={{
+                        //     webgl: {
+                        //         alpha: true,
+                        //         depth: true,
+                        //         stencil: true,
+                        //         antialias: true,
+                        //         premultipliedAlpha: true,
+                        //         preserveDrawingBuffer: true,   // ★★★ 必须加
+                        //     }
+                        // }}
                     />
 
                 </Content>

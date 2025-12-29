@@ -3,8 +3,8 @@ import numpy as np
 import os
 
 # ====== 配置 ======
-input_dir = "./outputs/img_annotation"   # 标注渲染图目录
-output_dir = "./outputs/img_mask"        # 输出 mask 目录
+input_dir = "./outputs/annotation2"   # 标注渲染图目录
+output_dir = "./outputs/mask2"        # 输出 mask 目录
 os.makedirs(output_dir, exist_ok=True)
 
 # ====== 类别定义（OpenCV: BGR）=====
